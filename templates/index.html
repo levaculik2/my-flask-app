@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transferência de Arquivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .main {
+            padding: 20px;
+        }
+        .file-selector, .destinations {
+            margin-bottom: 20px;
+        }
+        .file-selector input, .destinations input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">LOGO</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Transferências</a>
+            <a href="#">Histórico</a>
+            <a href="#">Configurações</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="file-selector">
+            <label for="files">Selecione os Arquivos:</label>
+            <input type="file" id="files" multiple>
+        </div>
+        <div class="destinations">
+            <label for="dest-drive">Drive de Destino:</label>
+            <input type="text" id="dest-drive">
+        </div>
+        <div class="buttons">
+            <button onclick="startTransfer()">Iniciar Transferência</button>
+            <button onclick="cancelTransfer()">Cancelar</button>
+            <button onclick="viewHistory()">Histórico de Transferências</button>
+        </div>
+    </div>
+    <script>
+        function startTransfer() {
+            // Chamar rclone para iniciar a transferência
+            alert("Iniciando transferência...");
+        }
+        function cancelTransfer() {
+            // Cancelar a transferência
+            alert("Transferência cancelada.");
+        }
+        function viewHistory() {
+            // Ver histórico de transferências
+            alert("Visualizando histórico de transferências.");
+        }
+    </script>
+</body>
+</html>
+
